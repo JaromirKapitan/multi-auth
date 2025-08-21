@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Modely, migracie a routes (Pages, Articles, SeoData)">
-      <change afterPath="$PROJECT_DIR$/app/Enums/ContentStatus.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ArticleFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/PageFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/parts/badge.blade.php" afterDir="false" />
+    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Pages - factory, vypis&#10;Articles - factory">
+      <change afterPath="$PROJECT_DIR$/resources/sass/fontawesome.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/admin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/admin.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +215,8 @@
       <workItem from="1755671822868" duration="54000" />
       <workItem from="1755757507453" duration="10000" />
       <workItem from="1755785983180" duration="2639000" />
-      <workItem from="1755788673092" duration="2177000" />
+      <workItem from="1755788673092" duration="2269000" />
+      <workItem from="1755800182471" duration="2253000" />
     </task>
     <task id="LOCAL-00002" summary="admin - template">
       <option name="closed" value="true" />
@@ -246,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755788649839</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Pages - factory, vypis&#10;Articles - factory">
+      <option name="closed" value="true" />
+      <created>1755790960471</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1755790960471</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +272,7 @@
     <MESSAGE value="admin - template" />
     <MESSAGE value="admin - prvotny dizajnu" />
     <MESSAGE value="Modely, migracie a routes (Pages, Articles, SeoData)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modely, migracie a routes (Pages, Articles, SeoData)" />
+    <MESSAGE value="Pages - factory, vypis&#10;Articles - factory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pages - factory, vypis&#10;Articles - factory" />
   </component>
 </project>

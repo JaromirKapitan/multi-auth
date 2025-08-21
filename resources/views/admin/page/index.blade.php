@@ -16,13 +16,20 @@
             <tr>
                 <td>{{ $item->id }}</td>
                 <td>{{ $item->title }}</td>
-                <td>{{ $item->status }}
-
-{{--                    {!! \App\Enums\ContentStatus::badge($item->status) !!}--}}
-
-                    <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+                <td>
+                    <span class=" w-75 badge rounded-pill content-status-{{ $item->status }}">
+                        {{ __($item->status) }}
+                    </span>
                 </td>
-                <td></td>
+                <td class="text-end">
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                        <button type="button" class="btn btn-outline-primary">
+                            <i class="fa fa-pen"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary">Middle</button>
+                        <button type="button" class="btn btn-outline-primary">Right</button>
+                    </div>
+                </td>
             </tr>
         @endforeach
         </tbody>
