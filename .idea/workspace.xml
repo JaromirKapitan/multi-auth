@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Pages - factory, vypis&#10;Articles - factory">
+    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Pages stav - badge">
       <change afterPath="$PROJECT_DIR$/resources/sass/fontawesome.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/admin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/admin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +216,8 @@
       <workItem from="1755757507453" duration="10000" />
       <workItem from="1755785983180" duration="2639000" />
       <workItem from="1755788673092" duration="2269000" />
-      <workItem from="1755800182471" duration="2253000" />
+      <workItem from="1755800182471" duration="2387000" />
+      <workItem from="1755802608102" duration="490000" />
     </task>
     <task id="LOCAL-00002" summary="admin - template">
       <option name="closed" value="true" />
@@ -250,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755790960471</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Pages stav - badge">
+      <option name="closed" value="true" />
+      <created>1755802564841</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1755802564841</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +282,7 @@
     <MESSAGE value="admin - prvotny dizajnu" />
     <MESSAGE value="Modely, migracie a routes (Pages, Articles, SeoData)" />
     <MESSAGE value="Pages - factory, vypis&#10;Articles - factory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pages - factory, vypis&#10;Articles - factory" />
+    <MESSAGE value="Pages stav - badge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pages stav - badge" />
   </component>
 </project>
