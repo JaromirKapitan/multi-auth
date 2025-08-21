@@ -2,8 +2,12 @@
     <li>
         CMS
         <ul>
-            <li>Pages</li>
-            <li>Articles</li>
+            <li>
+                <a href="{{ route('admin.pages.index') }}">Pages</a>
+            </li>
+            <li>
+                <a href="{{ route('admin.articles.index') }}">Articles</a>
+            </li>
         </ul>
     </li>
     <li>
