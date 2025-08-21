@@ -28,5 +28,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', function () {
             return view('admin.dashboard');
         });
+
+        Route::resource('pages', \App\Http\Controllers\PageController::class);
+        Route::resource('articles', \App\Http\Controllers\ArticleController::class);
     });
 });
