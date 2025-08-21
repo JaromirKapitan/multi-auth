@@ -1,4 +1,19 @@
-MENU
+<ul>
+    <li>
+        CMS
+        <ul>
+            <li>Pages</li>
+            <li>Articles</li>
+        </ul>
+    </li>
+    <li>
+        Ine
+        <ul>
+            <li>Produkty</li>
+            <li>Objednavky</li>
+        </ul>
+    </li>
+</ul>
 
 
 {{--<div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" data-bs-scroll="true" data-bs-backdrop="false">--}}

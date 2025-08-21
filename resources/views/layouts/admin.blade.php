@@ -14,18 +14,27 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/admin.scss', 'resources/js/admin.js'])
 </head>
 <body>
     @include('admin.navbar')
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3 col-xl-2 d-none d-md-block p-1 bg-secondary text-white h-100">
-                @include('admin.menu')
-            </div>
-            <div class="col p-1">RIGHT</div>
-        </div>
+
+        @guest
+            <main class="py-4">
+                @yield('content')
+            </main>
+        @else
+            <main class="row">
+                <div class="col-md-3 col-xl-2 d-none d-md-block menu">
+                    @include('admin.menu')
+                </div>
+                <div class="col">
+                    @yield('content')
+                </div>
+            </main>
+        @endguest
     </div>
 
 
