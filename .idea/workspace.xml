@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Page - navbarsub, create form">
+    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Page - create">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/page/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/layout.blade.php" afterDir="false" />
     </list>
     <list id="c883e21b-063b-46a5-b071-ded2f5a54352" name="ignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +225,7 @@
       <workItem from="1755843102420" duration="11000" />
       <workItem from="1756035026485" duration="4321000" />
       <workItem from="1756053458359" duration="4058000" />
-      <workItem from="1756060634181" duration="3145000" />
+      <workItem from="1756060634181" duration="3422000" />
     </task>
     <task id="LOCAL-00002" summary="admin - template">
       <option name="closed" value="true" />
@@ -290,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756057542548</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Page - create">
+      <option name="closed" value="true" />
+      <created>1756063823729</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756063823729</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +326,7 @@
     <MESSAGE value="admin - dizajn update" />
     <MESSAGE value="admin menu - links" />
     <MESSAGE value="Page - navbarsub, create form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page - navbarsub, create form" />
+    <MESSAGE value="Page - create" />
+    <option name="LAST_COMMIT_MESSAGE" value="Page - create" />
   </component>
 </project>

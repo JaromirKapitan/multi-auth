@@ -42,4 +42,19 @@ class PageController extends Controller
             'status' => 'required|in:' . ContentStatus::valuesString(),
         ]);
     }
+
+    public function edit(Page $page)
+    {
+        return view('admin.page.form', [
+            'model' => $page,
+        ]);
+    }
+
+    public function update(Request $request, Page $page)
+    {
+        $page->update($this->validateRequest($request));
+        return redirect()
+            ->route('admin.pages.index')
+            ->with('success', trans('Data updated successfully.'));
+    }
 }

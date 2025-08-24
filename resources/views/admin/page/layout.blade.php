@@ -7,7 +7,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <a class="navbar-brand" href="#">{{ __('Pages') }}</a>
+            <a class="navbar-brand" href="{{ route('admin.pages.index') }}">{{ __('Pages') }}</a>
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarSubLeft" aria-labelledby="offcanvasNavbarSubLeftLabel">
                 <div class="offcanvas-header">

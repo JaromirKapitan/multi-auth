@@ -2,8 +2,11 @@
 
 @section('content')
     <div class="container-fluid">
-        <form method="post" action="{{ route('admin.pages.store') }}">
+        <form method="post" action="{{ $model->id ? route('admin.pages.update', $model) : route('admin.pages.store') }}">
             @csrf
+            @if($model->id)
+                @method('PUT')
+            @endif
 
             <div class="mb-3">
                 <label for="title" class="form-label">{{ __('Title') }}</label>

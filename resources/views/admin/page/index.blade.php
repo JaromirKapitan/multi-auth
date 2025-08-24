@@ -22,7 +22,7 @@
                     </span>
                 </td>
                 <td class="text-end">
-                    <a href="#" class="text-warning"><i class="fa fa-pencil"></i></a>
+                    <a href="{{ route('admin.pages.edit', $item) }}" class="text-warning"><i class="fa fa-pencil"></i></a>
                     <a href="#" class="text-danger"><i class="fa fa-trash-can"></i></a>
                 </td>
             </tr>
