@@ -23,7 +23,14 @@
                 </td>
                 <td class="text-end">
                     <a href="{{ route('admin.pages.edit', $item) }}" class="text-warning"><i class="fa fa-pencil"></i></a>
-                    <a href="#" class="text-danger"><i class="fa fa-trash-can"></i></a>
+
+                    <a class="text-danger submit-form" href="#">
+                        <i class="fa fa-trash-can"></i>
+                    </a>
+                    <form action="{{ route('admin.pages.destroy', $item->id) }}" method="POST" class="d-none">
+                        @csrf
+                        @method('DELETE')
+                    </form>
                 </td>
             </tr>
         @endforeach

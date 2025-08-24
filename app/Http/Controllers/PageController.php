@@ -57,4 +57,12 @@ class PageController extends Controller
             ->route('admin.pages.index')
             ->with('success', trans('Data updated successfully.'));
     }
+
+    public function destroy(Page $page)
+    {
+        $page->delete();
+        return redirect()
+            ->route('admin.pages.index')
+            ->with('success', trans('Data deleted successfully.'));
+    }
 }

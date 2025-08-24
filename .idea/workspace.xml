@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Page - create">
+    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Page - edit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/layout.blade.php" afterDir="false" />
     </list>
     <list id="c883e21b-063b-46a5-b071-ded2f5a54352" name="ignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,19 +169,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jarom/Develop/multi-auth/resources/views/admin/page&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/jarom/Develop/multi-auth/resources/views/admin/page",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.3.6\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jarom\Develop\multi-auth\resources\views\admin\page" />
@@ -225,7 +228,7 @@
       <workItem from="1755843102420" duration="11000" />
       <workItem from="1756035026485" duration="4321000" />
       <workItem from="1756053458359" duration="4058000" />
-      <workItem from="1756060634181" duration="3422000" />
+      <workItem from="1756060634181" duration="4483000" />
     </task>
     <task id="LOCAL-00002" summary="admin - template">
       <option name="closed" value="true" />
@@ -299,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756063823729</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Page - edit">
+      <option name="closed" value="true" />
+      <created>1756064128875</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1756064128875</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +338,7 @@
     <MESSAGE value="admin menu - links" />
     <MESSAGE value="Page - navbarsub, create form" />
     <MESSAGE value="Page - create" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page - create" />
+    <MESSAGE value="Page - edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Page - edit" />
   </component>
 </project>
