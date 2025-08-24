@@ -19,23 +19,14 @@ enum ContentStatus: string
         return implode(',', self::values());
     }
 
-    public static function badge($status)
+    public static function cssClass($status)
     {
-//        switch ($status){
-//            case self::Published:
-//                $class = 'success';
-//                break;
-//            case self::Archived:
-//                $class = 'secondary';
-//                break;
-//            default:
-//                $class = 'warning';
-//                break;
-//        }
-//
-//        return view('admin.parts.badge', [
-//            'class' => $class,
-//            'text' => trans($status),
-//        ]);
+        if($status == self::Published->value)
+            return "success";
+
+        if($status == self::Archived->value)
+            return "danger";
+
+        return "warning";
     }
 }

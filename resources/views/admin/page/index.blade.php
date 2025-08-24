@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('admin.page.layout')
 
 @section('content')
     <table class="table table-hover border-1">
@@ -22,14 +22,8 @@
                     </span>
                 </td>
                 <td class="text-end">
-                    <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                        <button type="button" class="btn btn-warning">
-                            <i class="fa fa-pen"></i>
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                            <i class="fa fa-trash"></i>
-                        </button>
-                    </div>
+                    <a href="#" class="text-warning"><i class="fa fa-pen"></i></a>
+                    <a href="#" class="text-danger"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
         @endforeach

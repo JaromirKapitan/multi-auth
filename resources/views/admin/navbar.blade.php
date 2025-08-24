@@ -18,16 +18,14 @@
                             <i class="fa fa-home"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" title="{{ __('Pages') }}">
                         <a class="nav-link" href="{{ route('admin.pages.index') }}">
-                            <i class="fa fa-eye"></i>
-                            {Page}
+                            <i class="fa fa-globe"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" title="{{ __('Articles') }}">
                         <a class="nav-link" href="{{ route('admin.articles.index') }}">
-                            <i class="fa fa-home"></i>
-                            {Article}
+                            <i class="fa fa-newspaper"></i>
                         </a>
                     </li>
 
