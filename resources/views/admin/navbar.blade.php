@@ -19,14 +19,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ route('admin.pages.index') }}">
                             <i class="fa fa-eye"></i>
                             {Page}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fa fa-eye"></i>
+                        <a class="nav-link" href="{{ route('admin.articles.index') }}">
+                            <i class="fa fa-home"></i>
                             {Article}
                         </a>
                     </li>
