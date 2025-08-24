@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('admin.layout')
 
 @section('content')
     <table class="table table-hover border-1">
@@ -23,11 +23,12 @@
                 </td>
                 <td class="text-end">
                     <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                        <button type="button" class="btn btn-outline-primary">
+                        <button type="button" class="btn btn-warning">
                             <i class="fa fa-pen"></i>
                         </button>
-                        <button type="button" class="btn btn-outline-primary">Middle</button>
-                        <button type="button" class="btn btn-outline-primary">Right</button>
+                        <button type="button" class="btn btn-danger">
+                            <i class="fa fa-trash"></i>
+                        </button>
                     </div>
                 </td>
             </tr>
