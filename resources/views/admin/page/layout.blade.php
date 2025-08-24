@@ -1,7 +1,7 @@
 @extends('admin.layout')
 
 @section('menu')
-    <nav class="navbar navbar-expand-md sticky-top bg-info" data-bs-theme="info">
+    <nav class="navbar navbar-expand-md sticky-top bg-light-subtle" data-bs-theme="dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSubLeft" aria-controls="offcanvasNavbarSubLeft" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,24 +25,35 @@
                 </div>
             </div>
 
-{{--            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSubRight" aria-controls="offcanvasNavbarSubRight" aria-label="Toggle navigation">--}}
-{{--                <span class="navbar-toggler-icon"></span>--}}
-{{--            </button>--}}
-{{--            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarSubRight" aria-labelledby="offcanvasNavbarSubRightLabel">--}}
-{{--                <div class="offcanvas-header">--}}
-{{--                    <h5 class="offcanvas-title" id="offcanvasNavbarSubRightLabel">Offcanvas</h5>--}}
-{{--                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>--}}
-{{--                </div>--}}
-{{--                <div class="offcanvas-body">--}}
-{{--                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a class="nav-link" href="#">--}}
-{{--                                    {{ Auth::user()->name }}--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            @if(!empty($model) && $model->id)
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSubRight" aria-controls="offcanvasNavbarSubRight" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarSubRight" aria-labelledby="offcanvasNavbarSubRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarSubRightLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="{{ route('admin.pages.edit', $model) }}">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger submit-form" href="#" data-ask="{{ __('Do you really want to delete this record?') }}">
+                                    <i class="fa fa-trash-can"></i>
+                                </a>
+                                <form action="{{ route('admin.pages.destroy', $model) }}" method="POST" class="d-none">
+                                    @csrf
+                                    @method('DELETE')
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            @endif
         </div>
     </nav>
 @endsection

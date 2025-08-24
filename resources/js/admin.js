@@ -7,11 +7,13 @@ $(function (){
         e.preventDefault();
 
         let target = $(this).data('form-target');
-        if(target !== undefined)
-            $(target).submit();
-        else
-            $(this).siblings('form').submit();
+        let $form = target !== undefined ? $(target) : $(this).siblings('form');
 
+        let ask = $(this).data('ask');
+        if(ask !== undefined && !confirm(ask))
+            return false;
+
+        $form.submit();
         return false;
     })
 })

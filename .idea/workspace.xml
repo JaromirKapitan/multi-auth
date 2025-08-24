@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Page - edit">
+    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Page - delete/destroy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/layout.blade.php" afterDir="false" />
     </list>
     <list id="c883e21b-063b-46a5-b071-ded2f5a54352" name="ignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +225,7 @@
       <workItem from="1755843102420" duration="11000" />
       <workItem from="1756035026485" duration="4321000" />
       <workItem from="1756053458359" duration="4058000" />
-      <workItem from="1756060634181" duration="4483000" />
+      <workItem from="1756060634181" duration="5823000" />
     </task>
     <task id="LOCAL-00002" summary="admin - template">
       <option name="closed" value="true" />
@@ -310,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756064128875</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Page - delete/destroy">
+      <option name="closed" value="true" />
+      <created>1756065204389</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1756065204389</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +344,7 @@
     <MESSAGE value="Page - navbarsub, create form" />
     <MESSAGE value="Page - create" />
     <MESSAGE value="Page - edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page - edit" />
+    <MESSAGE value="Page - delete/destroy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Page - delete/destroy" />
   </component>
 </project>
