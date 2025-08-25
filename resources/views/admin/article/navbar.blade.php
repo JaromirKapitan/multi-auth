@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-md sticky-top bg-light-subtle" data-bs-theme="dark">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSubLeft" aria-controls="offcanvasNavbarSubLeft" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSubLeft" aria-controls="offcanvasNavbarSubLeft"
+                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -14,7 +15,12 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.articles.create') }}">
+                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.articles.index')]) href="{{ route('admin.articles.index') }}">
+                            <i class="fa fa-list"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.articles.create')]) href="{{ route('admin.articles.create') }}">
                             <i class="fa fa-plus"></i>
                         </a>
                     </li>
@@ -23,7 +29,8 @@
         </div>
 
         @if(!empty($model) && $model->id)
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSubRight" aria-controls="offcanvasNavbarSubRight" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSubRight"
+                    aria-controls="offcanvasNavbarSubRight" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarSubRight" aria-labelledby="offcanvasNavbarSubRightLabel">
@@ -34,12 +41,12 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.articles.edit', $model) }}">
+                            <a @class(['nav-link', 'active'=>request()->routeIs('admin.articles.edit')]) href="{{ route('admin.articles.edit', $model) }}">
                                 <i class="fa fa-pencil"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link submit-form" href="#" data-ask="{{ __('Do you really want to delete this record?') }}">
+                            <a class="nav-link submit-form text-hover-danger" href="#" data-ask="{{ __('Do you really want to delete this record?') }}">
                                 <i class="fa fa-trash-can"></i>
                             </a>
                             <form action="{{ route('admin.articles.destroy', $model) }}" method="POST" class="d-none">

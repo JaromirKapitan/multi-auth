@@ -19,12 +19,12 @@
                         </a>
                     </li>
                     <li class="nav-item" title="{{ __('Pages') }}">
-                        <a class="nav-link" href="{{ route('admin.pages.index') }}">
+                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.pages.*')]) href="{{ route('admin.pages.index') }}">
                             <i class="fa fa-globe"></i>
                         </a>
                     </li>
                     <li class="nav-item" title="{{ __('Articles') }}">
-                        <a class="nav-link" href="{{ route('admin.articles.index') }}">
+                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.articles.*')]) href="{{ route('admin.articles.index') }}">
                             <i class="fa fa-newspaper"></i>
                         </a>
                     </li>
