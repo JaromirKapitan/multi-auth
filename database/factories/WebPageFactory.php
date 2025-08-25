@@ -6,9 +6,9 @@ use App\Enums\ContentStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Page>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\WebPage>
  */
-class PageFactory extends Factory
+class WebPageFactory extends Factory
 {
     /**
      * Define the model's default state.

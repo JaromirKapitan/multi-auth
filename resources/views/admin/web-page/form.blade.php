@@ -1,8 +1,8 @@
-@extends('admin.page.layout')
+@extends('admin.web-page.layout')
 
 @section('content')
     <div class="container-fluid">
-        <form method="post" action="{{ $model->id ? route('admin.pages.update', $model) : route('admin.pages.store') }}">
+        <form method="post" action="{{ $model->id ? route('admin.web-pages.update', $model) : route('admin.web-pages.store') }}">
             @csrf
             @if($model->id)
                 @method('PUT')

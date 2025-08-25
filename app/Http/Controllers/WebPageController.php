@@ -3,24 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Enums\ContentStatus;
-use App\Models\Page;
+use App\Models\WebPage;
 use App\Models\SeoData;
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class WebPageController extends Controller
 {
-
     public function index()
     {
-        return view('admin.page.index', [
-            'list' => Page::all(),
+        return view('admin.web-page.index', [
+            'list' => WebPage::all(),
         ]);
     }
 
     public function create()
     {
-        return view('admin.page.form', [
-            'model' => new Page(session()->get('_old_input') ?? [
+        return view('admin.web-page.form', [
+            'model' => new WebPage(session()->get('_old_input') ?? [
                 'status' => ContentStatus::Draft->value
             ]),
         ]);
@@ -28,11 +27,11 @@ class PageController extends Controller
 
     public function store(Request $request)
     {
-        $page = Page::create($this->validateRequest($request));
-        $page->seo()->create($request->get('seo'));
+        $webPage = WebPage::create($this->validateRequest($request));
+        $webPage->seo()->create($request->get('seo'));
 
         return redirect()
-            ->route('admin.pages.index')
+            ->route('admin.web-pages.index')
             ->with('success', trans('Data stored successfully.'));
     }
 
@@ -46,28 +45,28 @@ class PageController extends Controller
         ], SeoData::$rules));
     }
 
-    public function edit(Page $page)
+    public function edit(WebPage $webPage)
     {
-        return view('admin.page.form', [
-            'model' => $page,
+        return view('admin.web-page.form', [
+            'model' => $webPage,
         ]);
     }
 
-    public function update(Request $request, Page $page)
+    public function update(Request $request, WebPage $webPage)
     {
-        $page->update($this->validateRequest($request));
-        $page->seo()->update($request->get('seo'));
+        $webPage->update($this->validateRequest($request));
+        $webPage->seo()->update($request->get('seo'));
 
         return redirect()
-            ->route('admin.pages.index')
+            ->route('admin.web-pages.index')
             ->with('success', trans('Data updated successfully.'));
     }
 
-    public function destroy(Page $page)
+    public function destroy(WebPage $webPage)
     {
-        $page->delete();
+        $webPage->delete();
         return redirect()
-            ->route('admin.pages.index')
+            ->route('admin.web-pages.index')
             ->with('success', trans('Data deleted successfully.'));
     }
 }

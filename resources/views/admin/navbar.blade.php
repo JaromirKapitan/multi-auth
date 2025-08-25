@@ -19,7 +19,7 @@
                         </a>
                     </li>
                     <li class="nav-item" title="{{ __('Pages') }}">
-                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.pages.*')]) href="{{ route('admin.pages.index') }}">
+                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.web-pages.*')]) href="{{ route('admin.web-pages.index') }}">
                             <i class="fa fa-globe"></i>
                         </a>
                     </li>

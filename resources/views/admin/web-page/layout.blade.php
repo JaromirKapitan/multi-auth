@@ -1,5 +1,5 @@
 @extends('admin.layout')
 
 @section('menu')
-    @include('admin.page.navbar')
+    @include('admin.web-page.navbar')
 @endsection

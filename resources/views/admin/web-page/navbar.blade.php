@@ -4,7 +4,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="{{ route('admin.pages.index') }}">{{ __('Pages') }}</a>
+        <a class="navbar-brand" href="{{ route('admin.web-pages.index') }}">{{ __('Pages') }}</a>
 
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarSubLeft" aria-labelledby="offcanvasNavbarSubLeftLabel">
             <div class="offcanvas-header">
@@ -14,16 +14,16 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.pages.index')]) href="{{ route('admin.articles.index') }}">
+                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.web-pages.index')]) href="{{ route('admin.articles.index') }}">
                             <i class="fa fa-list"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.pages.create')]) href="{{ route('admin.pages.create') }}">
+                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.web-pages.create')]) href="{{ route('admin.web-pages.create') }}">
                             <i class="fa fa-plus"></i>
                         </a>
                     </li>
-{{--                    <li @class(['nav-link', 'active'=>request()->routeIs('admin.pages.index')])>--}}
+{{--                    <li @class(['nav-link', 'active'=>request()->routeIs('admin.web-pages.index')])>--}}
 {{--                        <a class="nav-link" href="#">--}}
 {{--                            <i class="fa fa-folder-tree"></i>--}}
 {{--                        </a>--}}
@@ -44,7 +44,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a @class(['nav-link', 'active'=>request()->routeIs('admin.pages.edit')]) href="{{ route('admin.pages.edit', $model) }}">
+                            <a @class(['nav-link', 'active'=>request()->routeIs('admin.web-pages.edit')]) href="{{ route('admin.web-pages.edit', $model) }}">
                                 <i class="fa fa-pencil"></i>
                             </a>
                         </li>
@@ -52,7 +52,7 @@
                             <a class="nav-link submit-form text-hover-danger" href="#" data-ask="{{ __('Do you really want to delete this record?') }}">
                                 <i class="fa fa-trash-can"></i>
                             </a>
-                            <form action="{{ route('admin.pages.destroy', $model) }}" method="POST" class="d-none">
+                            <form action="{{ route('admin.web-pages.destroy', $model) }}" method="POST" class="d-none">
                                 @csrf
                                 @method('DELETE')
                             </form>

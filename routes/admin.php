@@ -29,7 +29,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
             return view('admin.dashboard');
         })->name('dashboard');
 
-        Route::resource('pages', \App\Http\Controllers\PageController::class);
+        Route::resource('web-pages', \App\Http\Controllers\WebPageController::class);
         Route::resource('articles', \App\Http\Controllers\ArticleController::class);
     });
 });
