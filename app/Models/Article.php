@@ -11,4 +11,9 @@ class Article extends Model
     use SoftDeletes, HasFactory, Seoble;
 
     protected $fillable = ['title', 'text_short', 'text', 'status'];
+
+    public function webPages()
+    {
+        return $this->belongsToMany(WebPage::class);
+    }
 }

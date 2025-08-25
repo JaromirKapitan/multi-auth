@@ -16,6 +16,19 @@
 
                         <div class="card-body">
                             <div class="mb-3">
+                                <label for="page" class="form-label">{{ __('Page') }}</label>
+                                <select class="form-select select2 @error('web_pages') is-invalid @enderror" id="web_pages" name="web_pages[]" multiple>
+                                    @foreach(\App\Models\WebPage::all() as $page)
+                                        <option value="{{ $page->id }}" {{ $model->webPages->contains($page) ? 'selected' : '' }}>{{ $page->title }}</option>
+                                    @endforeach
+                                </select>
+
+                                @error('web_pages')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3">
                                 <label for="title" class="form-label">{{ __('Title') }}</label>
                                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"
                                        value="{{ $model->title ?? '' }}"

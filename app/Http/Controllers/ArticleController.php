@@ -56,6 +56,7 @@ class ArticleController extends Controller
     {
         $article->update($this->validateRequest($request));
         $article->seo()->update($request->get('seo'));
+        $article->webPages()->sync($request->get('web_pages'));
 
         return redirect()
             ->route('admin.articles.index')

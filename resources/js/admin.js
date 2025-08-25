@@ -2,6 +2,18 @@ import './bootstrap';
 import jQuery from 'jquery';
 $ = window.jQuery = window.$ = jQuery;
 
+import select2 from 'select2';
+window.select2 = select2;
+select2($);
+
+// // nastavenie prekladov pre select2
+// let customTranslations = {};
+// Object.keys(config.select2).forEach(function (key) {
+//     customTranslations[key] = function () {
+//         return config.select2[key];
+//     }
+// });
+
 import slug from 'slug'
 window.slug = slug;
 
@@ -9,6 +21,10 @@ import SeoForm from './seo-form.js';
 
 $(function (){
     window.seoForm = new SeoForm();
+    $('.select2').select2({
+        theme: 'bootstrap-5',
+        // language: customTranslations,
+    })
 
     $('.submit-form').click(function (e){
         e.preventDefault();

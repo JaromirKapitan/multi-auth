@@ -12,4 +12,8 @@ class WebPage extends Model
 
     protected $fillable = ['title', 'text_short', 'text', 'status'];
 
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }
