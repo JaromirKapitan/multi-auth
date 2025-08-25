@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Articles Crud">
+    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Navbar - zvyraznenie aktivnych odkazov">
+      <change afterPath="$PROJECT_DIR$/resources/sass/admin/_miscellaneous.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/admin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/admin.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/admin/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/admin/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/article/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/article/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/navbar.blade.php" afterDir="false" />
     </list>
     <list id="c883e21b-063b-46a5-b071-ded2f5a54352" name="ignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +234,7 @@
       <workItem from="1756053458359" duration="4058000" />
       <workItem from="1756060634181" duration="6789000" />
       <workItem from="1756101989999" duration="40000" />
-      <workItem from="1756140449391" duration="9849000" />
+      <workItem from="1756140449391" duration="10593000" />
     </task>
     <task id="LOCAL-00002" summary="admin - template">
       <option name="closed" value="true" />
@@ -358,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756148897981</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Navbar - zvyraznenie aktivnych odkazov">
+      <option name="closed" value="true" />
+      <created>1756150451818</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1756150451818</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,6 +398,7 @@
     <MESSAGE value="drobne upravy&#10;- rozdelenie pages layout a navbar&#10;- dashbord pomenovanie route a doplnenie odkazu v navbar" />
     <MESSAGE value="Pages seo data" />
     <MESSAGE value="Articles Crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="Articles Crud" />
+    <MESSAGE value="Navbar - zvyraznenie aktivnych odkazov" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navbar - zvyraznenie aktivnych odkazov" />
   </component>
 </project>

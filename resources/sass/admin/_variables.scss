@@ -7,5 +7,9 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 //$menu-size: 200px;
+$active-color: #ffc107;
+
 $navbar-dark-active-color: #ffc107;
 $navbar-dark-brand-color: white;
+$navbar-dark-hover-color: lighten($active-color, 20%);
+$navbar-dark-brand-hover-color: lighten($active-color, 20%);

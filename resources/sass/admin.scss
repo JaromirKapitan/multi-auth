@@ -8,27 +8,4 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'fontawesome';
 
-.navbar-brand{
-    min-width: 70px;
-}
-
-.badge{
-    &.content-status-draft {
-        color: $black;
-        background-color: $warning;
-    }
-
-    &.content-status-published {
-        color: white;
-        background-color: $success;
-    }
-
-    &.content-status-archived {
-        color: white;
-        background-color: $danger;
-    }
-}
-
-.text-hover-danger:hover{
-    color: $danger;
-}
+@import 'admin/miscellaneous';
