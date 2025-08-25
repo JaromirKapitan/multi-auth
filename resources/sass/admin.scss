@@ -8,36 +8,6 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'fontawesome';
 
-//@import 'layout';
-
-//main {
-//    > div {
-//        padding: 1rem;
-//
-//        &.menu {
-//            background-color: silver;
-//            border-right: 1px solid;
-//
-//            ul {
-//                padding-left: 1.2rem;
-//            }
-//        }
-//    }
-//}
-
-.badge{
-    &.content-status-draft {
-        color: $black;
-        background-color: $warning;
-    }
-
-    &.content-status-published {
-        color: white;
-        background-color: $success;
-    }
-
-    &.content-status-archived {
-        color: white;
-        background-color: $danger;
-    }
+.navbar-brand{
+    min-width: 70px;
 }

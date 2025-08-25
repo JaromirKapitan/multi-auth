@@ -2,9 +2,71 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\ContentStatus;
+use App\Models\Article;
+use App\Models\SeoData;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('admin.article.index', [
+            'list' => Article::all(),
+        ]);
+    }
+
+    public function create()
+    {
+        return view('admin.article.form', [
+            'model' => new Article(session()->get('_old_input') ?? [
+                'status' => ContentStatus::Draft->value
+            ]),
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        $article = Article::create($this->validateRequest($request));
+        $article->seo()->create($request->get('seo'));
+
+        return redirect()
+            ->route('admin.articles.index')
+            ->with('success', trans('Data stored successfully.'));
+    }
+
+    protected function validateRequest(Request $request)
+    {
+        return $request->validate(array_merge([
+            'title' => 'required|string|max:255',
+            'text_short' => 'nullable|string|max:300',
+            'text' => 'nullable|string',
+            'status' => 'required|in:' . ContentStatus::valuesString(),
+        ], SeoData::$rules));
+    }
+
+    public function edit(Article $article)
+    {
+        return view('admin.article.form', [
+            'model' => $article,
+        ]);
+    }
+
+    public function update(Request $request, Article $article)
+    {
+        $article->update($this->validateRequest($request));
+        $article->seo()->update($request->get('seo'));
+
+        return redirect()
+            ->route('admin.articles.index')
+            ->with('success', trans('Data updated successfully.'));
+    }
+
+    public function destroy(Article $article)
+    {
+        $article->delete();
+        return redirect()
+            ->route('admin.articles.index')
+            ->with('success', trans('Data deleted successfully.'));
+    }
 }
