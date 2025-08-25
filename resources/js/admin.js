@@ -2,7 +2,14 @@ import './bootstrap';
 import jQuery from 'jquery';
 $ = window.jQuery = window.$ = jQuery;
 
+import slug from 'slug'
+window.slug = slug;
+
+import SeoForm from './seo-form.js';
+
 $(function (){
+    window.seoForm = new SeoForm();
+
     $('.submit-form').click(function (e){
         e.preventDefault();
 

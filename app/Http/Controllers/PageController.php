@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Enums\ContentStatus;
 use App\Models\Page;
+use App\Models\SeoData;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+
     public function index()
     {
         return view('admin.page.index', [
@@ -26,7 +28,8 @@ class PageController extends Controller
 
     public function store(Request $request)
     {
-        Page::create($this->validateRequest($request));
+        $page = Page::create($this->validateRequest($request));
+        $page->seo()->create($request->get('seo'));
 
         return redirect()
             ->route('admin.pages.index')
@@ -35,12 +38,12 @@ class PageController extends Controller
 
     protected function validateRequest(Request $request)
     {
-        return $request->validate([
+        return $request->validate(array_merge([
             'title' => 'required|string|max:255',
-            'text_short' => 'nullable|string|max:1000',
+            'text_short' => 'nullable|string|max:300',
             'text' => 'nullable|string',
             'status' => 'required|in:' . ContentStatus::valuesString(),
-        ]);
+        ], SeoData::$rules));
     }
 
     public function edit(Page $page)
@@ -53,6 +56,8 @@ class PageController extends Controller
     public function update(Request $request, Page $page)
     {
         $page->update($this->validateRequest($request));
+        $page->seo()->update($request->get('seo'));
+
         return redirect()
             ->route('admin.pages.index')
             ->with('success', trans('Data updated successfully.'));

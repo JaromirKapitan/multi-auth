@@ -4,7 +4,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="#">{{ config('app.name', 'Laravel') }} - {Admin}</a>
+        <a class="navbar-brand" href="#">{{ config('app.name', 'Laravel') }}</a>
 
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarLeft" aria-labelledby="offcanvasNavbarLeftLabel">
             <div class="offcanvas-header">

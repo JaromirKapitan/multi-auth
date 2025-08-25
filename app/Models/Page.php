@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Page extends Model
 {
-    use SoftDeletes, HasFactory;
+    use SoftDeletes, HasFactory, Seoble;
 
     protected $fillable = ['title', 'text_short', 'text', 'status'];
+
 }
