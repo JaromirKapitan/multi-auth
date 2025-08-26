@@ -22,9 +22,9 @@
                     </span>
                 </td>
                 <td class="text-end">
-                    <a href="{{ route('admin.articles.edit', $item) }}" class="text-warning"><i class="fa fa-pencil"></i></a>
+                    <a href="{{ route('admin.articles.edit', $item) }}" class="text-secondary text-hover-warning"><i class="fa fa-pencil"></i></a>
 
-                    <a class="text-danger submit-form" href="#" data-ask="{{ __('Do you really want to delete this record?') }}">
+                    <a class="text-secondary text-hover-danger submit-form" href="#" data-ask="{{ __('Do you really want to delete this record?') }}">
                         <i class="fa fa-trash-can"></i>
                     </a>
                     <form action="{{ route('admin.articles.destroy', $item->id) }}" method="POST" class="d-none">
