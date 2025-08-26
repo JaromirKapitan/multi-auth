@@ -53,7 +53,7 @@
 
                             <div class="mb-3">
                                 <label for="text" class="form-label">{{ __('Text') }}</label>
-                                <textarea class="form-control @error('text') is-invalid @enderror" id="text" name="text"
+                                <textarea class="form-control ckeditor @error('text') is-invalid @enderror" id="text" name="text"
                                 >{{ $model->text_short ?? '' }}</textarea>
 
                                 @error('text')

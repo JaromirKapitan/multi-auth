@@ -18,6 +18,7 @@ import slug from 'slug'
 window.slug = slug;
 
 import SeoForm from './seo-form.js';
+import ckeditorInit from './ckeditor.js';
 
 $(function (){
     window.seoForm = new SeoForm();
@@ -25,6 +26,9 @@ $(function (){
         theme: 'bootstrap-5',
         // language: customTranslations,
     })
+
+    ckeditorInit();
+
 
     $('.submit-form').click(function (e){
         e.preventDefault();
