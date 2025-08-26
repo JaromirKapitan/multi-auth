@@ -42,7 +42,7 @@
 
                             <div class="mb-3">
                                 <label for="text_short" class="form-label">{{ __('Short text') }}</label>
-                                <textarea class="form-control @error('text_short') is-invalid @enderror" id="text_short"
+                                <textarea class="form-control ckeditor @error('text_short') is-invalid @enderror" id="text_short"
                                           name="text_short" data-seo-description maxlength="250"
                                 >{{ $model->text_short ?? '' }}</textarea>
 

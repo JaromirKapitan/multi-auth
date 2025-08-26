@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="Relation: article - webPage">
-      <change afterPath="$PROJECT_DIR$/resources/js/ckeditor.js" afterDir="false" />
+    <list default="true" id="1202b5ea-3675-4d4c-b90d-180fe0747839" name="Changes" comment="ckeditor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/ckeditor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/article/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/article/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" afterDir="false" />
     </list>
     <list id="c883e21b-063b-46a5-b071-ded2f5a54352" name="ignore" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +237,7 @@
       <workItem from="1756101989999" duration="40000" />
       <workItem from="1756140449391" duration="10593000" />
       <workItem from="1756188282618" duration="143000" />
-      <workItem from="1756222907402" duration="3340000" />
+      <workItem from="1756222907402" duration="7234000" />
     </task>
     <task id="LOCAL-00002" summary="admin - template">
       <option name="closed" value="true" />
@@ -376,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756152735666</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ckeditor">
+      <option name="closed" value="true" />
+      <created>1756226628547</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1756226628547</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,6 +419,7 @@
     <MESSAGE value="Articles Crud" />
     <MESSAGE value="Navbar - zvyraznenie aktivnych odkazov" />
     <MESSAGE value="Premenovanie Page na WebPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Premenovanie Page na WebPage" />
+    <MESSAGE value="ckeditor" />
+    <option name="LAST_COMMIT_MESSAGE" value="ckeditor" />
   </component>
 </project>

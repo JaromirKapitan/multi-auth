@@ -1,29 +1,4 @@
 export default function init() {
-    // const {
-    //     ClassicEditor,
-    //     Essentials,
-    //     Bold,
-    //     Italic,
-    //     Font,
-    //     Paragraph
-    // } = CKEDITOR;
-    //
-    // ClassicEditor
-    //     .create( document.querySelector( '.ckeditor' ), {
-    //         licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3ODc3ODg3OTksImp0aSI6ImVkMjFjNWU4LWRjMmYtNDQ4Yi1hOTc2LTBlMjNmYzhlMTI3ZSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIiwiRTJQIiwiRTJXIl0sInZjIjoiMWUwODczYTEifQ.61LbHEk8UlotAE9G2VcoQ-HPcj1D03HpfYOQSmVaycActrfI8AszVc_w0AqEkWySP2iIuHvYEjkKzTbXC06Unw',
-    //         plugins: [ Essentials, Paragraph, Bold, Italic, Font ],
-    //         toolbar: [
-    //             'undo', 'redo', '|', 'bold', 'italic', '|',
-    //             'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
-    //         ]
-    //     } )
-    //     .then( editor => {
-    //         window.editor = editor;
-    //     } )
-    //     .catch( error => {
-    //         console.error( error );
-    //     } );
-
     /**
      * This configuration was generated using the CKEditor 5 Builder. You can modify it anytime using this link:
      * https://ckeditor.com/ckeditor-5/builder/?redirect=portal#installation/NoFgNARATAdA7DKFIEYooJwDYSZHADigFYBmFLbTABgyJAOIxCYINIxVLlOqm2QQApgDtk1MMBRgJE6XIC6kAMYAzYuuIAjCAqA=
@@ -105,7 +80,7 @@ export default function init() {
         TableToolbar,
         TextPartLanguage,
         TextTransformation,
-        Title,
+        // Title,
         TodoList,
         Underline,
         WordCount
@@ -117,54 +92,67 @@ export default function init() {
     const editorConfig = {
         toolbar: {
             items: [
-                'undo',
-                'redo',
-                '|',
+                // // https://ckeditor.com/docs/ckeditor5/latest/getting-started/setup/toolbar.html#basic-toolbar-configuration
+                // {
+                //     icon: 'threeVerticalDots',
+                //     label: 'More basic styles',
+                //     tooltip: 'Basic formatting features',
+                //     withText: true,
+                //     items: [ 'strikethrough', 'superscript', 'subscript' ]
+                // },
+
+
+                // 'undo',
+                // 'redo',
+                // '|',
                 'sourceEditing',
-                'showBlocks',
-                'findAndReplace',
-                'textPartLanguage',
+                // 'showBlocks',
+                // 'findAndReplace',
+                // 'textPartLanguage',
                 'fullscreen',
                 '|',
                 'heading',
-                'style',
-                '|',
+                // 'style',
+                // '|',
                 'fontSize',
-                'fontFamily',
+                // 'fontFamily',
                 'fontColor',
                 'fontBackgroundColor',
                 '|',
                 'bold',
                 'italic',
                 'underline',
-                'strikethrough',
-                'subscript',
-                'superscript',
-                'code',
-                'removeFormat',
+                // 'strikethrough',
+                // 'subscript',
+                // 'superscript',
+                // 'code',
+                // 'removeFormat',
                 '|',
-                'emoji',
-                'specialCharacters',
-                'horizontalLine',
+                // 'emoji',
+                // 'specialCharacters',
+                // 'horizontalLine',
                 'pageBreak',
                 'link',
-                'bookmark',
-                'insertImage',
-                'mediaEmbed',
+                // 'bookmark',
+                // 'insertImage',
+                // 'mediaEmbed',
                 'insertTable',
-                'insertTableLayout',
-                'highlight',
-                'blockQuote',
-                'codeBlock',
-                'htmlEmbed',
+                // 'insertTableLayout',
+                // 'highlight',
+                // 'blockQuote',
+                // 'codeBlock',
+                // 'htmlEmbed',
                 '|',
-                'alignment',
+                'alignment:left',
+                'alignment:center',
+                'alignment:right',
+                'alignment:justify',
                 '|',
                 'bulletedList',
                 'numberedList',
-                'todoList',
-                'outdent',
-                'indent'
+                // 'todoList',
+                // 'outdent',
+                // 'indent'
             ],
             shouldNotGroupWhenFull: false
         },
@@ -243,7 +231,7 @@ export default function init() {
             TableToolbar,
             TextPartLanguage,
             TextTransformation,
-            Title,
+            // Title,
             TodoList,
             Underline,
             WordCount
@@ -256,6 +244,9 @@ export default function init() {
             supportAllValues: true
         },
         fullscreen: {
+            // menuBar:{
+            //     isVisible: false
+            // },
             onEnterCallback: container =>
                 container.classList.add(
                     'editor-container',
@@ -416,11 +407,12 @@ export default function init() {
         }
     };
 
-    ClassicEditor.create(document.querySelector('.ckeditor'), editorConfig).then(editor => {
-        const wordCount = editor.plugins.get('WordCount');
-        document.querySelector('#editor-word-count').appendChild(wordCount.wordCountContainer);
+    $('.ckeditor').each(function(){
+        ClassicEditor.create(this, editorConfig).then(editor => {
+            // const wordCount = editor.plugins.get('WordCount');
+            // document.querySelector('#editor-word-count').appendChild(wordCount.wordCountContainer);
 
-        return editor;
-    });
-
+            return editor;
+        });
+    })
 }
