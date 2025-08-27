@@ -13,6 +13,8 @@
         <link rel="dns-prefetch" href="//fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+        @livewireStyles
+
         <!-- Scripts -->
         @vite(['resources/sass/admin.scss', 'resources/js/admin.js'])
     </head>
@@ -22,12 +24,15 @@
 
     @yield('menu')
 
+    <livewire:temp />
     <main class="py-2">
         @yield('content')
     </main>
 
     <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/46.0.2/ckeditor5.css" />
     <script src="https://cdn.ckeditor.com/ckeditor5/46.0.2/ckeditor5.umd.js"></script>
+
+    @livewireScripts
 
     </body>
 </html>
