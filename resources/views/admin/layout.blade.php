@@ -24,7 +24,6 @@
 
     @yield('menu')
 
-    <livewire:temp />
     <main class="py-2">
         @yield('content')
     </main>

@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    use MediaController;
+
     public function index()
     {
         return view('admin.article.index', [
@@ -69,5 +71,13 @@ class ArticleController extends Controller
         return redirect()
             ->route('admin.articles.index')
             ->with('success', trans('Data deleted successfully.'));
+    }
+
+    protected function getMediaParams($id)
+    {
+        return [
+            'model' => Article::findOrFail($id),
+            'layout' => 'admin.article.layout',
+        ];
     }
 }

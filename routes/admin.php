@@ -29,7 +29,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
             return view('admin.dashboard');
         })->name('dashboard');
 
+        // web-pages
         Route::resource('web-pages', \App\Http\Controllers\WebPageController::class);
+
+        // articles
         Route::resource('articles', \App\Http\Controllers\ArticleController::class);
+        Route::get('/articles/{id}/images', [\App\Http\Controllers\ArticleController::class, 'images'])->name('articles.images');
     });
 });
