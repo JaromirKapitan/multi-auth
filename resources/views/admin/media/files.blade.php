@@ -1,5 +1,5 @@
 @extends($layout)
 
 @section('content')
-    <livewire:Admin.MediaImages :model="$model" />
+    <livewire:Admin.MediaFiles :model="$model" />
 @endsection

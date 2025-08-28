@@ -35,5 +35,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // articles
         Route::resource('articles', \App\Http\Controllers\ArticleController::class);
         Route::get('/articles/{id}/images', [\App\Http\Controllers\ArticleController::class, 'images'])->name('articles.images');
+        Route::get('/articles/{id}/files', [\App\Http\Controllers\ArticleController::class, 'files'])->name('articles.files');
     });
 });

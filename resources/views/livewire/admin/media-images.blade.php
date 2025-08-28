@@ -10,8 +10,8 @@
             x-on:livewire-upload-progress="progress = $event.detail.progress"
         >
 
-            <input class="form-control" type="file" multiple wire:model="images"/>
-            @error('images')
+            <input class="form-control" type="file" multiple wire:model="files"/>
+            @error('files')
             <span class="alert alert-error">{{ $message }}</span>
             @enderror
 
@@ -23,10 +23,10 @@
     </form>
 
     <div class="row g-3">
-        @foreach($model->getMedia('images') as $image)
+        @foreach($model->getMedia($type) as $file)
             <div class="col-sm-6 col-md-3 col-lg-2">
                 <div class="card h-100">
-                    <img src="{{ $image->getUrl() }}" class="img-thumbnail" alt="..."/>
+                    <img src="{{ $file->getUrl() }}" class="img-thumbnail" alt="..."/>
                     <div class="card-body d-flex align-items-end">
                         <div class="btn-group btn-group-sm w-100" role="group" aria-label="Small button group">
                             <button type="button" class="btn btn-outline-decondary disabled">
@@ -35,7 +35,7 @@
                             <button type="button" class="btn btn-outline-decondary disabled">
                                 <i class="fa fa-pencil"></i>
                             </button>
-                            <button type="button" class="btn btn-outline-danger" wire:click="delete({{$image->id}})">
+                            <button type="button" class="btn btn-outline-danger" wire:click="delete({{$file->id}})">
                                 <i class="fa fa-trash-can"></i>
                             </button>
                         </div>
