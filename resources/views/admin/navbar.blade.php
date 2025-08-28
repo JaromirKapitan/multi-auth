@@ -6,6 +6,8 @@
 
         <a class="navbar-brand" href="#">{{ config('app.name', 'Laravel') }}</a>
 
+        @guest
+        @else
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbarLeft" aria-labelledby="offcanvasNavbarLeftLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLeftLabel">Offcanvas</h5>
@@ -49,6 +51,7 @@
                 </ul>
             </div>
         </div>
+        @endguest
 
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarRight" aria-controls="offcanvasNavbarRight" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -61,6 +64,7 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <!-- Authentication Links -->
+
                     @guest
                         @if (Route::has('admin.login'))
                             <li class="nav-item">
