@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Enums\ContentStatus;
 use App\Http\Controllers\Controller;
 use App\Models\SeoData;
+use App\Models\WebMenu;
 use App\Models\WebPage;
 use Illuminate\Http\Request;
 
@@ -69,5 +70,18 @@ class WebPageController extends Controller
         return redirect()
             ->route('admin.web-pages.index')
             ->with('success', trans('Data deleted successfully.'));
+    }
+
+    public function map()
+    {
+        return view('admin.web-page.map', [
+            'webPages' => WebPage::where('status', ContentStatus::Published->value)->get(),
+            'webMenus' => WebMenu::whereNull('web_menu_id')->get(),
+        ]);
+    }
+
+    public function mapStore(Request $request)
+    {
+        dd($request->all()); // todo: TMP
     }
 }

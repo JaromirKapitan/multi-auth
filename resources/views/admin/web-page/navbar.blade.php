@@ -23,11 +23,11 @@
                             <i class="fa fa-plus"></i>
                         </a>
                     </li>
-{{--                    <li @class(['nav-link', 'active'=>request()->routeIs('admin.web-pages.index')])>--}}
-{{--                        <a class="nav-link" href="#">--}}
-{{--                            <i class="fa fa-folder-tree"></i>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                    <li class="nav-item">
+                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.web-pages.map')]) href="{{ route('admin.web-pages.map') }}">
+                            <i class="fa fa-sitemap"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

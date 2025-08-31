@@ -10,6 +10,8 @@ export default defineConfig({
 
                 'resources/sass/admin.scss',
                 'resources/js/admin.js',
+
+                'resources/js/admin/web_menu.js',
             ],
             refresh: true,
         }),

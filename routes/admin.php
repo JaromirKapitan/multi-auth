@@ -29,7 +29,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         })->name('dashboard');
 
         // web-pages
-        Route::resource('web-pages', \App\Http\Controllers\Admin\WebPageController::class);
+        Route::resource('web-pages', \App\Http\Controllers\Admin\WebPageController::class, ['except' => 'show']);
+        Route::get('web-pages/map', [\App\Http\Controllers\Admin\WebPageController::class, 'map'])->name('web-pages.map');
+        Route::post('web-pages/map', [\App\Http\Controllers\Admin\WebPageController::class, 'mapStore'])->name('web-pages.map.store');
 
         // articles
         Route::resource('articles', \App\Http\Controllers\Admin\ArticleController::class);
