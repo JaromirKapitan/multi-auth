@@ -41,15 +41,20 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a @class(['nav-link', 'active'=>request()->routeIs('admin.articles.images')]) href="{{ route('admin.articles.images', $model) }}">
-                                <i class="fa fa-image"></i>
+                            <a @class(['nav-link', 'active'=>request()->routeIs('admin.articles.show')]) href="{{ route('admin.articles.show', $model) }}">
+                                <i class="fa fa-info"></i>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a @class(['nav-link', 'active'=>request()->routeIs('admin.articles.files')]) href="{{ route('admin.articles.files', $model) }}">
-                                <i class="fa fa-file"></i>
-                            </a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a @class(['nav-link', 'active'=>request()->routeIs('admin.articles.images')]) href="{{ route('admin.articles.images', $model) }}">--}}
+{{--                                <i class="fa fa-image"></i>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a @class(['nav-link', 'active'=>request()->routeIs('admin.articles.files')]) href="{{ route('admin.articles.files', $model) }}">--}}
+{{--                                <i class="fa fa-file"></i>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
                         <li class="nav-item">
                             <a @class(['nav-link', 'active'=>request()->routeIs('admin.articles.edit')]) href="{{ route('admin.articles.edit', $model) }}">
                                 <i class="fa fa-pencil"></i>

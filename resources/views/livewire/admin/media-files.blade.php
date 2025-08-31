@@ -1,7 +1,4 @@
-<div class="container-fluid">
-
-    <h1>Media Files</h1>
-
+<div>
     <form wire:submit="store" class="mb-3">
         <div
             x-data="{ uploading: false, progress: 0 }"

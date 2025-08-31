@@ -18,6 +18,13 @@ class ArticleController extends Controller
         ]);
     }
 
+    public function show(Article $article)
+    {
+        return view('admin.article.show', [
+            'model' => $article,
+        ]);
+    }
+
     public function create()
     {
         return view('admin.article.form', [
