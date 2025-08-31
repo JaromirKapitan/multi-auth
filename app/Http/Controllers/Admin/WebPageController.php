@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Enums\ContentStatus;
-use App\Models\WebPage;
+use App\Http\Controllers\Controller;
 use App\Models\SeoData;
+use App\Models\WebPage;
 use Illuminate\Http\Request;
 
 class WebPageController extends Controller

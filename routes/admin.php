@@ -1,10 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\Auth\ForgotPasswordController;
+use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\Auth\ResetPasswordController;
+use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', function () {
@@ -30,11 +29,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
         })->name('dashboard');
 
         // web-pages
-        Route::resource('web-pages', \App\Http\Controllers\WebPageController::class);
+        Route::resource('web-pages', \App\Http\Controllers\Admin\WebPageController::class);
 
         // articles
-        Route::resource('articles', \App\Http\Controllers\ArticleController::class);
-        Route::get('/articles/{id}/images', [\App\Http\Controllers\ArticleController::class, 'images'])->name('articles.images');
-        Route::get('/articles/{id}/files', [\App\Http\Controllers\ArticleController::class, 'files'])->name('articles.files');
+        Route::resource('articles', \App\Http\Controllers\Admin\ArticleController::class);
+        Route::get('/articles/{id}/images', [\App\Http\Controllers\Admin\ArticleController::class, 'images'])->name('articles.images');
+        Route::get('/articles/{id}/files', [\App\Http\Controllers\Admin\ArticleController::class, 'files'])->name('articles.files');
     });
 });

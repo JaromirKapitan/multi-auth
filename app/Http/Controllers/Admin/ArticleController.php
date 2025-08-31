@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Enums\ContentStatus;
+use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\SeoData;
 use Illuminate\Http\Request;
