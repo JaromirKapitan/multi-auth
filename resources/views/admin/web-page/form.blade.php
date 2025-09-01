@@ -11,10 +11,15 @@
                 <div class="col-lg-9">
                     <div class="card h-100">
                         <div class="card-header">
-                            {{ __('Article') }}
+                            {{ __('Web pages') }}
                         </div>
 
                         <div class="card-body">
+                            <div class="mb-3">
+                                <input type="text" id="parent_id" name="parent_id" value="{{ $model->parent_id ?? '' }}">
+                                <input type="text" id="language_id" name="language_id" value="{{ $model->language_id ?? '' }}">
+                            </div>
+
                             <div class="mb-3">
                                 <label for="title" class="form-label">{{ __('Title') }}</label>
                                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"

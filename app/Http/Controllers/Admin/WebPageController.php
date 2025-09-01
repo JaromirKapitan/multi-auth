@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Enums\ContentStatus;
 use App\Http\Controllers\Controller;
+use App\Models\Language;
 use App\Models\SeoData;
 use App\Models\WebPage;
 use Illuminate\Http\Request;
@@ -13,15 +14,17 @@ class WebPageController extends Controller
     public function index()
     {
         return view('admin.web-page.index', [
-            'list' => WebPage::all(),
+            'list' => WebPage::parents()->get(),
         ]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
         return view('admin.web-page.form', [
             'model' => new WebPage(session()->get('_old_input') ?? [
-                'status' => ContentStatus::Draft->value
+                'status' => ContentStatus::Draft->value,
+                'language_id' => Language::where('code', $request->get('lang') ?? config('app.locale'))->first()->id,
+                'parent_id' => $request->get('parent_id') ?? null,
             ]),
         ]);
     }
@@ -39,6 +42,8 @@ class WebPageController extends Controller
     protected function validateRequest(Request $request)
     {
         return $request->validate(array_merge([
+            'parent_id' => 'nullable|integer',
+            'language_id' => 'nullable|integer',
             'title' => 'required|string|max:255',
             'text_short' => 'nullable|string|max:300',
             'text' => 'nullable|string',
