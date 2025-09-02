@@ -14,10 +14,8 @@
                 </div>
 
                 <div class="card-body">
-                    <div class="mb-3">
-                        <input type="hidden" id="parent_id" name="parent_id" value="{{ $model->parent_id ?? '' }}">
-                        <input type="hidden" id="lang" name="lang" value="{{ $model->lang ?? '' }}">
-                    </div>
+                    <input type="hidden" id="parent_id" name="parent_id" value="{{ $model->parent_id ?? '' }}">
+                    <input type="hidden" id="lang" name="lang" value="{{ $model->lang ?? '' }}">
 
                     <div class="mb-3">
                         <label for="page" class="form-label">{{ __('Page') }}</label>

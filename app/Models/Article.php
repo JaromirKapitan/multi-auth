@@ -10,9 +10,9 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Article extends Model implements HasMedia
 {
-    use SoftDeletes, HasFactory, Seoble, InteractsWithMedia;
+    use SoftDeletes, HasFactory, Seoble, InteractsWithMedia, LangMutation;
 
-    protected $fillable = ['title', 'description', 'text', 'status'];
+    protected $fillable = ['title', 'description', 'text', 'status', 'lang', 'parent_id'];
 
     public function webPages()
     {

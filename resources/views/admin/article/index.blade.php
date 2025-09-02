@@ -7,6 +7,7 @@
             <th>#</th>
             <th>{{ __('title') }}</th>
             <th>{{ __('status') }}</th>
+            <th>{{ __('lang') }}</th>
             <th></th>
         </tr>
         </thead>
@@ -20,6 +21,19 @@
                     <span class=" w-75 badge rounded-pill content-status-{{ $item->status }}">
                         {{ __($item->status) }}
                     </span>
+                </td>
+                <td>
+                    @foreach($item->mutations as $lang=>$mutation)
+                        @if($mutation)
+                            <a class="text-success" href="{{ route('admin.articles.edit', $mutation) }}">
+                                {{ $lang }}
+                            </a>
+                        @else
+                            <a class="" href="{{ route('admin.articles.create', ['lang' => $lang, 'parent_id' => $item->id]) }}">
+                                {{ $lang }}
+                            </a>
+                        @endif
+                    @endforeach
                 </td>
                 <td class="text-end">
                     <a href="{{ route('admin.articles.edit', $item) }}" class="text-secondary text-hover-warning"><i class="fa fa-pencil"></i></a>
