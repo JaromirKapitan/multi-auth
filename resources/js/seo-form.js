@@ -5,7 +5,7 @@ export default class SeoForm {
         this.$slug = $('#slug');
         if (this.$slug.length === 0) return false;
 
-        $('[data-seo-slug]').keyup(e => this.setSlug(e))
+        $('[data-seo="slug"]').keyup(e => this.setSlug(e))
     }
 
     setSlug(e) {

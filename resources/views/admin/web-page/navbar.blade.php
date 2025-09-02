@@ -14,7 +14,7 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.web-pages.index')]) href="{{ route('admin.articles.index') }}">
+                        <a @class(['nav-link', 'active'=>request()->routeIs('admin.web-pages.index')]) href="{{ route('admin.web-pages.index') }}">
                             <i class="fa fa-list"></i>
                         </a>
                     </li>
