@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\Lang;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -11,7 +12,7 @@ class WebPage extends Model
 {
     use SoftDeletes, HasFactory, Seoble;
 
-    protected $fillable = ['title', 'text_short', 'text', 'status', 'language_id', 'parent_id'];
+    protected $fillable = ['title', 'description', 'text', 'status', 'lang', 'parent_id'];
 
 //    protected static function booted()
 //    {
@@ -38,9 +39,9 @@ class WebPage extends Model
     public function getMutationsAttribute()
     {
         $mutations = [config('app.locale') => $this];
-        foreach(Language::all() as $language){
-            if($language->code == config('app.locale')) continue;
-            $mutations[$language->code] = self::where('language_id', $language->id)->where('parent_id', $this->id)->first();
+        foreach(Lang::values() as $lang){
+            if($lang == config('app.locale')) continue;
+            $mutations[$lang] = self::where('lang', $lang)->where('parent_id', $this->id)->first();
         }
 
         return $mutations;

@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('web_pages', function (Blueprint $table){
+        Schema::table('articles', function (Blueprint $table){
             $table->enum('lang', \App\Enums\Lang::values())->default(config('app.locale'));
 
             $table->foreignId('parent_id')->nullable();
-            $table->foreign('parent_id')->references('id')->on('web_pages');
+            $table->foreign('parent_id')->references('id')->on('articles');
 
             $table->renameColumn('text_short', 'description')->after('text');
         });
@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('web_pages', function (Blueprint $table){
+        Schema::table('articles', function (Blueprint $table){
             $table->dropForeign(['parent_id']);
             $table->dropColumn(['parent_id']);
 

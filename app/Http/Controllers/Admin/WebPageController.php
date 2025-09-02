@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Enums\ContentStatus;
+use App\Enums\Lang;
 use App\Http\Controllers\Controller;
 use App\Models\Language;
 use App\Models\SeoData;
@@ -11,6 +12,8 @@ use Illuminate\Http\Request;
 
 class WebPageController extends Controller
 {
+    use SeoController;
+
     public function index()
     {
         return view('admin.web-page.index', [
@@ -23,7 +26,7 @@ class WebPageController extends Controller
         return view('admin.web-page.form', [
             'model' => new WebPage(session()->get('_old_input') ?? [
                 'status' => ContentStatus::Draft->value,
-                'language_id' => Language::where('code', $request->get('lang') ?? config('app.locale'))->first()->id,
+                'lang' => $request->get('lang') ?? config('app.locale'),
                 'parent_id' => $request->get('parent_id') ?? null,
             ]),
         ]);
@@ -32,7 +35,7 @@ class WebPageController extends Controller
     public function store(Request $request)
     {
         $webPage = WebPage::create($this->validateRequest($request));
-        $webPage->seo()->create($request->get('seo'));
+        $webPage->seo()->create($this->getSeoData());
 
         return redirect()
             ->route('admin.web-pages.index')
@@ -43,12 +46,12 @@ class WebPageController extends Controller
     {
         return $request->validate(array_merge([
             'parent_id' => 'nullable|integer',
-            'language_id' => 'nullable|integer',
+            'lang' => 'nullable|in:' . Lang::valuesString(),
             'title' => 'required|string|max:255',
-            'text_short' => 'nullable|string|max:300',
+            'description' => 'nullable|string|max:300',
             'text' => 'nullable|string',
             'status' => 'required|in:' . ContentStatus::valuesString(),
-        ], SeoData::$rules));
+        ], $this->getSeoRules()));
     }
 
     public function edit(WebPage $webPage)
@@ -61,7 +64,7 @@ class WebPageController extends Controller
     public function update(Request $request, WebPage $webPage)
     {
         $webPage->update($this->validateRequest($request));
-        $webPage->seo()->update($request->get('seo'));
+        $webPage->seo()->update($this->getSeoData());
 
         return redirect()
             ->route('admin.web-pages.index')

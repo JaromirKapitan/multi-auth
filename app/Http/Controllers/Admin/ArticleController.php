@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Enums\ContentStatus;
+use App\Enums\Lang;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
-use App\Models\SeoData;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    use MediaController;
+    use MediaController, SeoController;
 
     public function index()
     {
@@ -38,7 +38,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $article = Article::create($this->validateRequest($request));
-        $article->seo()->create($request->get('seo'));
+        $article->seo()->create($this->getSeoData());
 
         return redirect()
             ->route('admin.articles.index')
@@ -48,11 +48,13 @@ class ArticleController extends Controller
     protected function validateRequest(Request $request)
     {
         return $request->validate(array_merge([
+            'parent_id' => 'nullable|integer',
+            'lang' => 'nullable|in:' . Lang::valuesString(),
             'title' => 'required|string|max:255',
-            'text_short' => 'nullable|string|max:300',
+            'description' => 'nullable|string|max:300',
             'text' => 'nullable|string',
             'status' => 'required|in:' . ContentStatus::valuesString(),
-        ], SeoData::$rules));
+        ], $this->getSeoRules()));
     }
 
     public function edit(Article $article)
@@ -65,7 +67,7 @@ class ArticleController extends Controller
     public function update(Request $request, Article $article)
     {
         $article->update($this->validateRequest($request));
-        $article->seo()->update($request->get('seo'));
+        $article->seo()->update($this->getSeoData());
         $article->webPages()->sync($request->get('web_pages'));
 
         return redirect()

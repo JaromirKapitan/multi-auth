@@ -22,7 +22,7 @@ class ArticleFactory extends Factory
 
         return [
             'title' => fake()->sentence(),
-            'text_short' => fake()->text(150),
+            'description' => fake()->text(150),
             'text' => fake()->text(300),
             'status' => $statuses[array_rand($statuses)]
         ];
