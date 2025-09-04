@@ -31,6 +31,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // web-pages
         Route::resource('web-pages', \App\Http\Controllers\Admin\WebPageController::class);
 
+        Route::get('/web-menu/edit', [\App\Http\Controllers\Admin\WebMenuController::class, 'edit'])->name('web-menu.edit');
+
         // articles
         Route::resource('articles', \App\Http\Controllers\Admin\ArticleController::class);
         Route::get('/articles/{id}/images', [\App\Http\Controllers\Admin\ArticleController::class, 'images'])->name('articles.images');

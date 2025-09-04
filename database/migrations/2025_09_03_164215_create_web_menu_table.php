@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('web_menu', function (Blueprint $table) {
+            $table->id();
+
+            $table->foreignId('parent_id')->nullable();
+            $table->foreign('parent_id')->references('id')->on('web_menu');
+
+            $table->string('title');
+
+            $table->nullableMorphs('target');
+            $table->string('link')->nullable();
+            $table->json('title_langs')->nullable();
+            $table->integer('order')->nullable();
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('web_menu');
+    }
+};
