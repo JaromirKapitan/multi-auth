@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/46.0.2/ckeditor5.css" />
     <script src="https://cdn.ckeditor.com/ckeditor5/46.0.2/ckeditor5.umd.js"></script>
 
-    @livewireScripts
+    @livewireScriptConfig
 
     </body>
 </html>

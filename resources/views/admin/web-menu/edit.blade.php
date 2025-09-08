@@ -1,5 +1,7 @@
 @extends('admin.web-page.layout')
 
 @section('content')
-    HELLO WEB PAGE
+    <div class="container-fluid">
+        <livewire:Admin.WebMenuEditor />
+    </div>
 @endsection

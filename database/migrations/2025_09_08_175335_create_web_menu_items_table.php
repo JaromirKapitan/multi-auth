@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('web_menu', function (Blueprint $table) {
+        Schema::create('web_menu_items', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('parent_id')->nullable();
-            $table->foreign('parent_id')->references('id')->on('web_menu');
+            $table->string('title');
+            $table->enum('lang', \App\Enums\Lang::values())->default(config('app.locale'));
 
-            $table->nullableMorphs('target');
-            $table->integer('order')->nullable();
+            $table->foreignId('parent_id')->nullable();
+            $table->foreign('parent_id')->references('id')->on('web_menu_items');
 
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('web_menu');
+        Schema::dropIfExists('web_menu_items');
     }
 };

@@ -20,6 +20,14 @@ window.slug = slug;
 import SeoForm from './seo-form.js';
 import ckeditorInit from './ckeditor.js';
 
+import sortable from './sortable'
+import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm';
+Alpine.plugin(sortable)
+
+window.Alpine = Alpine;
+window.Livewire = Livewire;
+Livewire.start()
+
 $(function (){
     window.seoForm = new SeoForm();
     $('.select2').select2({
