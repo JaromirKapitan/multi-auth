@@ -17,8 +17,6 @@ return new class extends Migration
             $table->foreignId('parent_id')->nullable();
             $table->foreign('parent_id')->references('id')->on('web_menu');
 
-            $table->string('title');
-
             $table->nullableMorphs('target');
             $table->string('link')->nullable();
             $table->json('title_langs')->nullable();

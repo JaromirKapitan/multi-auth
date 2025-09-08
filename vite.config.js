@@ -10,6 +10,8 @@ export default defineConfig({
 
                 'resources/sass/admin.scss',
                 'resources/js/admin.js',
+
+                'resources/js/admin/sortable.init.js',
             ],
             refresh: true,
         }),
