@@ -7,7 +7,9 @@
             <th>#</th>
             <th>{{ __('title') }}</th>
             <th>{{ __('status') }}</th>
-            <th>{{ __('lang') }}</th>
+            @if(\App\Enums\Lang::isMultilang())
+                <th>{{ __('lang') }}</th>
+            @endif
             <th></th>
         </tr>
         </thead>
@@ -22,6 +24,7 @@
                         {{ __($item->status) }}
                     </span>
                 </td>
+                @if(\App\Enums\Lang::isMultilang())
                 <td>
                     @foreach($item->mutations as $lang=>$mutation)
                         @if($mutation)
@@ -35,6 +38,7 @@
                         @endif
                     @endforeach
                 </td>
+                @endif
                 <td class="text-end">
                     <a href="{{ route('admin.web-pages.edit', $item) }}" class="text-warning"><i class="fa fa-pencil"></i></a>
 

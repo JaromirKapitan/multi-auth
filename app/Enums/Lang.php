@@ -13,14 +13,23 @@ enum Lang: string
     {
         $appLangs = env('APP_LANGS', null);
 
+        // todo: osetrit ci aby zadane hodnoty boli z mnoziny dostupnych hodnot
         if(!empty($appLangs))
             return explode(',', $appLangs);
 
-        return array_column(self::cases(), 'value');
+        // jednojazykova verzia
+        return [config('app.locale')];
+
+//        return array_column(self::cases(), 'value');
     }
 
     public static function valuesString(): string
     {
         return implode(',', self::values());
+    }
+
+    public static function isMultilang()
+    {
+        return count(self::values()) > 1;
     }
 }
