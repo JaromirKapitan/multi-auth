@@ -21,6 +21,7 @@
         "slug": "^11.0.0",
         "sortablejs": "^1.15.6",
         "tailwindcss": "^4.0.0",
-        "vite": "^7.0.4"
+        "vite": "^7.0.4",
+        "vite-plugin-fs": "^1.1.0"
     }
 }

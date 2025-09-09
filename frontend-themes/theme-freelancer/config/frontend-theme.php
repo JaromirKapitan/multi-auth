@@ -1,0 +1,10 @@
+<?php
+
+return [
+    'css' => [
+        'frontend-themes/theme-freelancer/resources/css/app.css',
+    ],
+    'js' => [
+        'frontend-themes/theme-freelancer/resources/js/app.js',
+    ],
+];

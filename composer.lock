@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7501aad8bc2d7338cf2cda104aac908",
+    "content-hash": "990db291e630606f019b3df189527ec1",
     "packages": [
+        {
+            "name": "acme/theme-default",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "frontend-themes/theme-default",
+                "reference": "c81d8249e30d367eadd46f732dc46a92926e274d"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ThemeDefault\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ThemeDefault\\": "src/"
+                }
+            },
+            "description": "Default frontend theme",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "acme/theme-freelancer",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "frontend-themes/theme-freelancer",
+                "reference": "1be431f26616b98e8f22de9e5a6abda1a38187ce"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ThemeFreelancer\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ThemeFreelancer\\": "src/"
+                }
+            },
+            "description": "Default frontend theme",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
         {
             "name": "brick/math",
             "version": "0.13.1",
@@ -8985,7 +9039,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "acme/theme-default": 20,
+        "acme/theme-freelancer": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

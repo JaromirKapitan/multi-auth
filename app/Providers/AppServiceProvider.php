@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +20,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $theme = env('APP_THEME', 'theme-default');
+        $config = config('frontend-theme', []);
+
+        $exportPath = base_path('bootstrap/cache/theme.json');
+        File::put($exportPath, json_encode($config));
     }
 }
