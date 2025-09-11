@@ -87,7 +87,7 @@ export default function init() {
     } = window.CKEDITOR;
 
     const LICENSE_KEY =
-        'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NTc0NjIzOTksImp0aSI6IjUyMTUxZDNiLWY2NDktNGNkZC1iMWI1LWE2MDc0OTM4NmI4OSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiLCJzaCJdLCJ3aGl0ZUxhYmVsIjp0cnVlLCJsaWNlbnNlVHlwZSI6InRyaWFsIiwiZmVhdHVyZXMiOlsiKiJdLCJ2YyI6IjlhZDg3MDk2In0.LHVZmDWuQ7pUNlc_dpO7iIp8AW7N7Bqpev6lRDqSaiLDiG0BtqjfGQpqfiDWpWCRWb2-wzE44Tlg-TalPSd33A';
+        'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3ODc3ODg3OTksImp0aSI6ImVkMjFjNWU4LWRjMmYtNDQ4Yi1hOTc2LTBlMjNmYzhlMTI3ZSIsImxpY2Vuc2VkSG9zdHMiOlsiMTI3LjAuMC4xIiwibG9jYWxob3N0IiwiMTkyLjE2OC4qLioiLCIxMC4qLiouKiIsIjE3Mi4qLiouKiIsIioudGVzdCIsIioubG9jYWxob3N0IiwiKi5sb2NhbCJdLCJ1c2FnZUVuZHBvaW50IjoiaHR0cHM6Ly9wcm94eS1ldmVudC5ja2VkaXRvci5jb20iLCJkaXN0cmlidXRpb25DaGFubmVsIjpbImNsb3VkIiwiZHJ1cGFsIl0sImxpY2Vuc2VUeXBlIjoiZGV2ZWxvcG1lbnQiLCJmZWF0dXJlcyI6WyJEUlVQIiwiRTJQIiwiRTJXIl0sInZjIjoiMWUwODczYTEifQ.61LbHEk8UlotAE9G2VcoQ-HPcj1D03HpfYOQSmVaycActrfI8AszVc_w0AqEkWySP2iIuHvYEjkKzTbXC06Unw';
 
     const editorConfig = {
         toolbar: {
@@ -247,6 +247,7 @@ export default function init() {
             // menuBar:{
             //     isVisible: false
             // },
+            // container: document.querySelector( 'form' ), // todo: nastavit spravny element (https://ckeditor.com/docs/ckeditor5/latest/features/fullscreen.html#using-a-custom-container)
             onEnterCallback: container =>
                 container.classList.add(
                     'editor-container',
