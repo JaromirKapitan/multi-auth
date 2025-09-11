@@ -33,58 +33,24 @@
                     <div class="mb-3">
                         <div class="row">
                             <div class="col-sm-6">
-                                <label for="title" class="form-label">{{ __('Title') }}</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"
-                                       value="{{ $model->title ?? '' }}"
-                                       data-seo-title data-seo-slug
-                                >
-
-                                @error('title')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
+                                <x-form.input name="title" :value="$model->title" :label="__('Title')" :inputAttributes="['data-seo' => 'slug']"/>
                             </div>
                             <div class="col-sm-6">
-                                <div class="mb-3">
-                                    <label for="slug" class="form-label">{{ __('Slug') }}</label>
-                                    <input type="text" class="form-control @error('slug') is-invalid @enderror"
-                                           id="slug" name="slug" value="{{ optional($model->seo)->slug }}"
-                                    >
-
-                                    @error('slug')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
+                                <x-form.input name="slug" :value="optional($model->seo)->slug" :label="__('Slug')"/>
                             </div>
                         </div>
                     </div>
 
-
                     <div class="mb-3">
-                        <label for="description" class="form-label">{{ __('Description') }}</label>
-                        <textarea class="form-control @error('description') is-invalid @enderror" id="description"
-                                  name="description" data-seo-description maxlength="250"
-                        >{{ $model->description ?? '' }}</textarea>
-
-                        @error('description')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
+                        <x-form.textarea name="description" :label="__('Description')">{{ $model->description }}</x-form.textarea>
                     </div>
 
                     <div class="mb-3">
-                        <x-form.textarea name="content" :label="__('Content')" addClass="">{{ $model->content }}</x-form.textarea>
+                        <x-form.textarea name="content" :label="__('Content')" addClass="ck editor">{{ $model->content }}</x-form.textarea>
                     </div>
 
                     <div class="mb-3 text-end">
-                        {{--                        <label for="status" class="form-label">{{ __('Status') }}</label>--}}
-                        <div class="btn-group" role="group">
-                            @foreach(\App\Enums\ContentStatus::values() as $status)
-                                <input type="radio" class="btn-check" name="status" id="status-{{ $status }}" autocomplete="off"
-                                       {{ $model->status == $status ? "checked='checked'" : "" }} value="{{ $status }}"
-                                >
-                                <label class="btn btn-outline-{{ \App\Enums\ContentStatus::cssClass($status) }}"
-                                       for="status-{{ $status }}">{{ __($status) }}</label>
-                            @endforeach
-                        </div>
+                        <x-form.content-status :value="$model->status"/>
                     </div>
                 </div>
             </div>
