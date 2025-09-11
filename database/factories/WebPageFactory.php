@@ -21,7 +21,7 @@ class WebPageFactory extends Factory
         $statuses = ContentStatus::values();
 
         return [
-            'title' => fake()->sentence(),
+            'title' => fake()->sentence(3),
             'description' => fake()->text(150),
             'text' => fake()->text(300),
             'status' => $statuses[array_rand($statuses)]

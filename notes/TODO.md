@@ -1,0 +1,3 @@
+- premenovat stlpec v web_pages/articles z 'text' na 'content' (vystiznejsi nazov)
+- vytvorit nastavenia pre web
+  - najake default nastavenia ako su kontaktne udaje, fakturacne udaje, odkazy na socialne media a pod 

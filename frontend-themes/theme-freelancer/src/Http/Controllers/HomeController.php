@@ -3,14 +3,14 @@
 namespace ThemeFreelancer\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\WebPage;
+use App\Models\WebMenu;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $pages = WebPage::where('id', 1)->get();
+        $list = WebMenu::whereNull('parent_id')->get();
 
-        return view('theme-freelancer::home', compact('pages'));
+        return view('theme-freelancer::home', compact('list'));
     }
 }

@@ -59,5 +59,8 @@ class WebMenuEditor extends Component
         }
     }
 
-
+    public function remove($webMenuId)
+    {
+        WebMenu::find($webMenuId)->delete();
+    }
 }
