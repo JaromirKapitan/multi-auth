@@ -9,6 +9,8 @@ class ServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
+        if(config('web.theme') != 'theme-default') return;
+
         $this->mergeConfigFrom(
             __DIR__ . '/../config/frontend-theme.php',
             'frontend-theme'
@@ -17,6 +19,8 @@ class ServiceProvider extends BaseServiceProvider
 
     public function boot()
     {
+        if(config('web.theme') != 'theme-default') return;
+
         // Views
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'theme-default');
 

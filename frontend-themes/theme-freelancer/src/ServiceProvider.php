@@ -9,7 +9,7 @@ class ServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
-        if(env('APP_THEME') != 'theme-freelancer') return;
+        if(config('web.theme') != 'theme-freelancer') return;
 
         $this->mergeConfigFrom(
             __DIR__ . '/../config/frontend-theme.php',
@@ -19,7 +19,7 @@ class ServiceProvider extends BaseServiceProvider
 
     public function boot()
     {
-        if(env('APP_THEME') != 'theme-freelancer') return;
+        if(config('web.theme') != 'theme-freelancer') return;
 
         // Views
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'theme-freelancer');

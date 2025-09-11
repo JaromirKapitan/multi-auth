@@ -9,7 +9,7 @@ class ServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
-        if(env('APP_THEME') != 'classic-white') return;
+        if(config('web.theme') != 'classic-white') return;
 
         $this->mergeConfigFrom(
             __DIR__ . '/../config/frontend-theme.php',
@@ -19,7 +19,7 @@ class ServiceProvider extends BaseServiceProvider
 
     public function boot()
     {
-        if(env('APP_THEME') != 'classic-white') return;
+        if(config('web.theme') != 'classic-white') return;
 
         // Views
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'classic-white');
