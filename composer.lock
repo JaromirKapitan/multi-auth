@@ -4,8 +4,35 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "990db291e630606f019b3df189527ec1",
+    "content-hash": "81f969f74aa20e14f689f519746c1483",
     "packages": [
+        {
+            "name": "acme/classic-white",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "frontend-themes/classic-white",
+                "reference": "96e5dd34f56e57f960967216c32c9eb608d50b52"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ClassicWhite\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ClassicWhite\\": "src/"
+                }
+            },
+            "description": "Default frontend theme",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
         {
             "name": "acme/theme-default",
             "version": "dev-main",
@@ -9040,6 +9067,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "acme/classic-white": 20,
         "acme/theme-default": 20,
         "acme/theme-freelancer": 20
     },

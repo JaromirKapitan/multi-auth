@@ -1,6 +1,6 @@
 <?php
 
-namespace ThemeFreelancer;
+namespace ClassicWhite;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -9,7 +9,7 @@ class ServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
-        if(env('APP_THEME') != 'theme-freelancer') return;
+        if(env('APP_THEME') != 'classic-white') return;
 
         $this->mergeConfigFrom(
             __DIR__ . '/../config/frontend-theme.php',
@@ -19,10 +19,10 @@ class ServiceProvider extends BaseServiceProvider
 
     public function boot()
     {
-        if(env('APP_THEME') != 'theme-freelancer') return;
+        if(env('APP_THEME') != 'classic-white') return;
 
         // Views
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'theme-freelancer');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'classic-white');
 
         // Routes
         if (! $this->app->routesAreCached()) {

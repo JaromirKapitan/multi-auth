@@ -7,6 +7,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "acme/classic-white": "@dev",
         "acme/theme-default": "@dev",
         "acme/theme-freelancer": "@dev",
         "laravel/framework": "^12.0",
@@ -87,6 +88,11 @@
         {
             "type": "path",
             "url": "frontend-themes/theme-freelancer",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "frontend-themes/classic-white",
             "options": { "symlink": true }
         }
     ]
