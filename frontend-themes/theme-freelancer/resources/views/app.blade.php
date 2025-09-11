@@ -74,7 +74,7 @@
 
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        {{ $item->target->text }}
+                        {{ $item->target->content }}
                     </div>
                 </div>
             </div>

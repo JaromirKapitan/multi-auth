@@ -71,13 +71,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="text" class="form-label">{{ __('Text') }}</label>
-                        <textarea class="form-control ckeditor @error('text') is-invalid @enderror" id="text" name="text"
-                        >{{ $model->text ?? '' }}</textarea>
-
-                        @error('text')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
+                        <x-form.textarea name="content" :label="__('Content')" addClass="">{{ $model->content }}</x-form.textarea>
                     </div>
 
                     <div class="mb-3 text-end">

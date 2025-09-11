@@ -49,7 +49,7 @@ class WebPageController extends Controller
             'lang' => 'nullable|in:' . Lang::valuesString(),
             'title' => 'required|string|max:255',
             'description' => 'nullable|string|max:300',
-            'text' => 'nullable|string',
+            'content' => 'nullable|string',
             'status' => 'required|in:' . ContentStatus::valuesString(),
         ], $this->getSeoRules()));
     }

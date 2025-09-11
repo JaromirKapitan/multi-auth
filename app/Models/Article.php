@@ -12,7 +12,7 @@ class Article extends Model implements HasMedia
 {
     use SoftDeletes, HasFactory, Seoble, InteractsWithMedia, LangMutation;
 
-    protected $fillable = ['title', 'description', 'text', 'status', 'lang', 'parent_id'];
+    protected $fillable = ['title', 'description', 'content', 'status', 'lang', 'parent_id'];
 
     public function webPages()
     {

@@ -11,7 +11,7 @@ class WebPage extends Model
 {
     use SoftDeletes, HasFactory, Seoble, LangMutation;
 
-    protected $fillable = ['title', 'description', 'text', 'status', 'lang', 'parent_id'];
+    protected $fillable = ['title', 'description', 'content', 'status', 'lang', 'parent_id'];
 
 //    protected static function booted()
 //    {
