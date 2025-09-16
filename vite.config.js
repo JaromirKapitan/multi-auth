@@ -9,7 +9,7 @@ let assetsConfig = {};
 
 if (fs.existsSync(themeConfigPath)) {
     const theme = JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'))
-    themeInputs = [...(theme.css || []), ...(theme.js || [])]
+    themeInputs = [...(theme.scss || []), ...(theme.css || []), ...(theme.js || [])]
     assetsConfig = theme.assets || {};
 }
 
@@ -57,6 +57,13 @@ if (assetsConfig.source && assetsConfig.target) {
 }
 
 export default defineConfig({
+    server: {
+        host: 'multi-auth.test', // nastavíš host na svoju doménu
+        // port: 80, // alebo akýkoľvek port chceš použiť
+        hmr: {
+            host: 'multi-auth.test', // HMR tiež musí vedieť o doméne
+        },
+    },
     plugins: [
         laravel({
             input: [
