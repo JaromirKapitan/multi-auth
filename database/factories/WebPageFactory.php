@@ -23,7 +23,7 @@ class WebPageFactory extends Factory
         return [
             'title' => fake()->sentence(3),
             'description' => fake()->text(150),
-            'text' => fake()->text(300),
+            'content' => fake()->text(300),
             'status' => $statuses[array_rand($statuses)]
         ];
     }

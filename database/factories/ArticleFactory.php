@@ -6,7 +6,7 @@ use App\Enums\ContentStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Page>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Article>
  */
 class ArticleFactory extends Factory
 {
@@ -23,7 +23,7 @@ class ArticleFactory extends Factory
         return [
             'title' => fake()->sentence(),
             'description' => fake()->text(150),
-            'text' => fake()->text(300),
+            'content' => fake()->text(300),
             'status' => $statuses[array_rand($statuses)]
         ];
     }
