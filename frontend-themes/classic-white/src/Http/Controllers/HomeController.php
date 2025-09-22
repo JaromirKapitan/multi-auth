@@ -50,13 +50,4 @@ class HomeController extends Controller
             'cars' => $this->cars,
         ]);
     }
-
-    public function index2()
-    {
-//        $pages = WebPage::where('id', 1)->get();
-
-        return view('classic-white::home_v2', [
-            'cars' => $this->cars,
-        ]);
-    }
 }
