@@ -32,6 +32,7 @@ class WebPageController extends Controller
         ]);
     }
 
+    // todo upravit: Vytvorit samostatny request WebPageRequest s validaciou
     public function store(Request $request)
     {
         $webPage = WebPage::create($this->validateRequest($request));
@@ -42,6 +43,7 @@ class WebPageController extends Controller
             ->with('success', trans('Data stored successfully.'));
     }
 
+    // todo: presunut do WebPageRequest
     protected function validateRequest(Request $request)
     {
         return $request->validate(array_merge([
@@ -61,6 +63,7 @@ class WebPageController extends Controller
         ]);
     }
 
+    // todo upravit: Vytvorit samostatny request WebPageRequest s validaciou
     public function update(Request $request, WebPage $webPage)
     {
         $webPage->update($this->validateRequest($request));
